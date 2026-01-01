@@ -1,26 +1,45 @@
-# 📈 AI-Powered Retail Sales Forecasting Dashboard
+# 📈 AI-Powered Retail Sales Forecasting & Inventory Dashboard
 
 ## 📝 Project Overview
-This project was developed as part of a data analytics internship. It uses historical retail data to predict future sales trends using Machine Learning (Prophet) and visualizes those insights in an interactive Power BI dashboard.
+This project was developed during my Data Analytics internship to solve a critical retail challenge: **Predicting future demand to optimize inventory levels.** By leveraging historical sales data (Price, Stock, and Volume), I built an end-to-end pipeline that cleans data with Python, forecasts 90 days of sales using the **Facebook Prophet Machine Learning model**, and visualizes actionable insights in **Power BI**.
 
-## 🛠️ Tech Stack
-- **Python**: For data cleaning and time-series forecasting.
-- **Facebook Prophet**: The AI model used for the 90-day sales forecast.
-- **Power BI**: For building the final predictive analytics dashboard.
-- **VS Code**: The primary IDE and environment manager.
+---
+
+## 🖼️ Dashboard Preview
+![Retail Sales Forecast Dashboard](dashboard_preview.png)
+*Figure 1: Final Interactive Dashboard showing Historical Sales vs. AI Predictions.*
+
+---
+
+## 💡 Key Features & Business Insights
+* **Actual vs. Forecasted Trend**: A unified view of historical sales and 90-day future predictions ($yhat$).
+* **Inventory Risk Alert**: Integrated analysis comparing `Stock Levels` vs. `Predicted Demand` to prevent stock-outs.
+* **Price Elasticity Mapping**: A scatter plot analysis showing how price changes correlate with sales volume.
+* **Seasonality Detection**: Automatically identified weekend sales spikes and monthly trends using Prophet's additive model.
+
+---
+
+## 🛠️ Tech Stack & Methodology
+- **Python (Pandas)**: Used for data preprocessing, handling missing values, and feature engineering (extracting month/day/year).
+- **Facebook Prophet**: Chosen for its robustness in handling seasonality, holidays, and trend changepoints in time-series data.
+- **Power BI Desktop**: Used for data modeling (creating 1:1 relationships) and designing a professional UX/UI for business stakeholders.
+- **Git/GitHub**: For version control and project documentation.
+
+---
 
 ## 📁 Project Structure
-- `data/`: Contains raw, cleaned, and forecasted CSV files.
-- `notebooks/`: Jupyter notebooks for data cleaning and AI modeling.
-- `dashboard/`: The Power BI (.pbix) dashboard file.
-- `requirements.txt`: List of Python libraries required.
+- `data/`: Contains `mock_kaggle.csv` (raw), `cleaned_sales_data.csv`, and `forecast_results.csv`.
+- `notebooks/`: 
+    - `1_Data_Cleaning.ipynb`: Data preprocessing and formatting.
+    - `2_Forecasting_Prophet.ipynb`: Training the ML model and exporting results.
+- `dashboard/`: The `Retail_Sales_Dashboard.pbix` file.
+- `requirements.txt`: Python dependencies (`prophet`, `pandas`, `matplotlib`).
 
-## 🚀 How to Run
-1. Create a virtual environment: `python -m venv .venv`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the notebooks in the `notebooks/` folder.
-4. Open the Power BI file in the `dashboard/` folder to view the visuals.
+---
 
-## 📊 Key Insights
-- Predicted sales trends for the next 90 days.
-- Identified seasonal spikes and weekend sales patterns.
+## 🚀 How to Run this Project
+1. **Setup Environment**:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+   pip install -r requirements.txt
