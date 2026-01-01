@@ -6,8 +6,8 @@ This project was developed during my Data Analytics internship to solve a critic
 ---
 
 ## 🖼️ Dashboard Preview
-![Retail Sales Forecast Dashboard](dashboard_preview.png)
-*Figure 1: Final Interactive Dashboard showing Historical Sales vs. AI Predictions.*
+
+<img width="1737" height="930" alt="dashboard_preview png" src="https://github.com/user-attachments/assets/7b8cc17d-5f26-496b-a0a0-974064d0a30a" />
 
 ---
 
